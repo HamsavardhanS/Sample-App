@@ -72,9 +72,9 @@ const Navbar = () => {
         {/* ================== USER NAVIGATION ================== */}
         {role === "USER" && (
           <>
-            <Button color="inherit" onClick={() => navigate("/userhome")}>
+            {/* <Button color="inherit" onClick={() => navigate("userhome/menu/:restaurantId")}>
               Menu
-            </Button>
+            </Button> */}
             <Button color="inherit" onClick={() => navigate("/userhome/orders")}>
               My Orders
             </Button>

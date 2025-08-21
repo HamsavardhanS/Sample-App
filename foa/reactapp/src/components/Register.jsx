@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Container, TextField, Button, Typography, Box, Alert } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-
+import { toast } from "react-toastify";
 export default function Register() {
   const [formData, setFormData] = useState({
     username: "",
@@ -23,10 +23,10 @@ export default function Register() {
 
     try {
       const res = await axios.post("http://localhost:9000/api/users/register", formData);
-      alert(res.data);
+      toast.success(res.data);
       navigate("/");
     } catch (err) {
-      setMessage(err.response?.data || "Registration failed");
+      toast.error(err.response?.data || "Registration failed");
     }
   };
 
