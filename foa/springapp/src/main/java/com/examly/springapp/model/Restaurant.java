@@ -22,6 +22,7 @@ public class Restaurant {
     private String contactEmail;
 
     private int rating; // average rating calculated from reviews
+    
     private String imageUrl;
 
     @ManyToOne

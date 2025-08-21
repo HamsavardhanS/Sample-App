@@ -28,8 +28,9 @@ import HotelAdminHome from "./components/HotelAdmin/HAdminHome";
 import HotelAdminOrders from "./components/HotelAdmin/HotelAdminOrders";  
 import HotelAdminInventory from "./components/HotelAdmin/HotelAdminInventory"; 
 import AddFood from "./components/HotelAdmin/AddFood";
-
-import { CartProvider } from "./Context/CartContext";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { CartProvider } from "./context/CartContext";
 // Paths where Navbar should be hidden
 const HideNavbarPaths = ["/", "/register", "/forgot-password"];
 
@@ -74,6 +75,16 @@ const AppWrapper = () => {
 
 const App = () => (
   <Router>
+    <ToastContainer 
+    position="top-right" 
+    autoClose={5000} 
+    hideProgressBar={false} 
+    newestOnTop={false} 
+    closeOnClick 
+    pauseOnFocusLoss
+    pauseOnHover 
+    draggable 
+    style={{zIndex : 9999}}/>
     <AppWrapper />
   </Router>
 );

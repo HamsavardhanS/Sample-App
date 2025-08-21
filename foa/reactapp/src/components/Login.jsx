@@ -45,7 +45,7 @@ const Login = () => {
       } else if (role === "HOTEL_ADMIN") {
         navigate("/hoteladmin");
       } else {
-        navigate("/home");
+        navigate("/userhome");
       }
     } catch (err) {
       console.error(err);
